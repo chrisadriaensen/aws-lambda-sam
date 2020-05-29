@@ -20,3 +20,4 @@ paths:
         type: aws
         httpMethod: POST
         uri: arn:aws:apigateway:eu-west-2:lambda:path/arn:aws:lambda:eu-west-2:132060109857:function:lambda-pipeline-stack-HelloWorldFunction-1J1EP5UEVI62L
+        credentials: arn:aws:iam::132060109857:role/apigateway-invoke-lambda-exec-role
