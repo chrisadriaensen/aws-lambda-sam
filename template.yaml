@@ -20,7 +20,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: hello-world/
-      Handler: app.handler
+      Handler: !Join [ '.', [ app, handler] ]
       Runtime: nodejs12.x
       Events:
         HelloWorld:
