@@ -17,4 +17,4 @@ paths:
                   message:
                     type: string
       x-amazon-apigateway-integration:
-        type: moc
+        type: mock
