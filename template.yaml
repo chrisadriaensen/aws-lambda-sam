@@ -24,4 +24,4 @@ Resources:
     Type: AWS::Serverless::Api
     Properties:
       StageName: prod
-      #DefinitionUri: hello-world/oas.yaml
+      DefinitionUri: hello-world/oas.yaml
