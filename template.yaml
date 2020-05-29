@@ -19,9 +19,8 @@ Resources:
           Properties:
             Path: /hello
             Method: get
-            RestApiId: !Ref HelloWorldApi
+            RestApiId: HelloWorldApi
   HelloWorldApi:
     Type: AWS::Serverless::Api
     Properties:
       StageName: prod
-      DefinitionUri: hello-world/oas.yaml
