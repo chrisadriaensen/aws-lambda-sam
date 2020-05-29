@@ -19,4 +19,4 @@ paths:
       x-amazon-apigateway-integration:
         type: aws
         httpMethod: POST
-        uri: !Join [ ':' [ 'arn:aws:lambda' , !Ref AWS::Region ] ]
+        uri: !Join [ ':', [ 'arn:aws:lambda' , !Ref AWS::Region ] ]
