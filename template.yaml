@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
 Description: Dummy AWS Lambda Function
 
@@ -25,3 +25,4 @@ Resources:
     Type: AWS::Serverless::Api
     Properties:
       StageName: prod
+      DefinitionUri: hello-world/oas.yaml
