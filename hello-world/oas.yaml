@@ -17,4 +17,6 @@ paths:
                   message:
                     type: string
       x-amazon-apigateway-integration:
-        type: mock
+        type: aws
+        httpMethod: POST
+        uri: !Join [ ":", [ "arn:aws:lambda", !Ref AWS::Region, !Ref AWS::AccountId, "function", !Ref HelloWorldFunction ]]
