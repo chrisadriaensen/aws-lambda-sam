@@ -13,3 +13,6 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  message:
+                    type: string
