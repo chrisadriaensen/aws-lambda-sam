@@ -7,6 +7,15 @@ Globals:
     Timeout: 3
 
 Resources:
+  HelloWorldApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+      DefinitionBody:
+        'Fn::Transform':
+          Name: AWS::Include
+          Parameters:
+            Location: hello-world/oas.yaml
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -33,12 +42,3 @@ Resources:
             Path: /hello2
             Method: get
             RestApiId: !Ref HelloWorldApi
-  HelloWorldApi:
-    Type: AWS::Serverless::Api
-    Properties:
-      StageName: prod
-      DefinitionBody:
-        'Fn::Transform':
-          Name: AWS::Include
-          Parameters:
-            Location: hello-world/oas.yaml
