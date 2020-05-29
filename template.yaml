@@ -8,7 +8,7 @@ Globals:
 
 Resources:
   HelloWorldApi:
-    Type: AWS::Serverless::HttpApi
+    Type: AWS::Serverless::Api
     Properties:
       StageName: prod
       DefinitionBody:
@@ -24,8 +24,8 @@ Resources:
       Runtime: nodejs12.x
       Events:
         HelloWorld:
-          Type: HttpApi
+          Type: Api
           Properties:
             Path: /hello
             Method: get
-            ApiId: !Ref HelloWorldApi
+            RestApiId: !Ref HelloWorldApi
