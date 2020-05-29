@@ -27,19 +27,3 @@ exports.handler = async (event, context) => {
 
     return response
 };
-
-exports.handler2 = async (event, context) => {
-    try {
-        response = {
-            'statusCode': 200,
-            'body': JSON.stringify({
-                message: 'HELLO WORLD',
-            })
-        }
-    } catch (err) {
-        console.log(err);
-        return err;
-    }
-
-    return response
-};

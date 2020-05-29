@@ -16,15 +16,5 @@ paths:
                 properties:
                   message:
                     type: string
-  /hello2:
-    get:
-      responses:
-        '200':
-          description: success
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
+      x-amazon-apigateway-integration:
+        type: moc
