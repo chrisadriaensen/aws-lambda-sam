@@ -28,7 +28,7 @@ Resources:
           Properties:
             Path: /hello
             Method: get
-            RestApiId: !Ref HelloWorldApi
+            ApiId: !Ref HelloWorldApi
   HelloWorldExtremeFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -41,4 +41,4 @@ Resources:
           Properties:
             Path: /hello2
             Method: get
-            RestApiId: !Ref HelloWorldApi
+            ApiId: !Ref HelloWorldApi
