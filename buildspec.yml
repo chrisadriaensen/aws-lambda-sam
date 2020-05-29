@@ -5,8 +5,7 @@ phases:
       nodejs: 12
   build:
     commands:
-      - sam build && sam package --s3-bucket $BUCKET --output-template-file package.yaml
+      - sam package --s3-bucket $BUCKET --output-template-file package.yaml
 artifacts:
-  type: zip
   files:
-    - package.yaml
+    - package
