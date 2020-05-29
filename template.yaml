@@ -19,7 +19,20 @@ Resources:
           Properties:
             Path: /hello
             Method: get
-            RestApiId: HelloWorldApi
+            RestApiId: !Ref HelloWorldApi
+  HelloWorldExtremeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: hello-world/
+      Handler: app.handler2
+      Runtime: nodejs12.x
+      Events:
+        HelloWorld:
+          Type: Api
+          Properties:
+            Path: /hello2
+            Method: get
+            RestApiId: !Ref HelloWorldApi
   HelloWorldApi:
     Type: AWS::Serverless::Api
     Properties:
