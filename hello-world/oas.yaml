@@ -18,6 +18,6 @@ paths:
                     type: string
       x-amazon-apigateway-integration:
         type: aws_proxy
-        #httpMethod: POST
-        #uri: arn:aws:apigateway:eu-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-2:132060109857:function:lambda-pipeline-stack-HelloWorldFunction-1J1EP5UEVI62L/invocations
-        #credentials: arn:aws:iam::132060109857:role/apigateway-invoke-lambda-exec-role
+        httpMethod: POST
+        uri: arn:aws:apigateway:eu-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-2:132060109857:function:lambda-pipeline-stack-HelloWorldFunction-1J1EP5UEVI62L/invocations
+        credentials: arn:aws:iam::132060109857:role/apigateway-invoke-lambda-exec-role
