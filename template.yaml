@@ -12,7 +12,7 @@ Resources:
     Properties:
       StageName: prod
       DefinitionBody:
-        'Fn::Transform':
+        Fn::Transform:
           Name: AWS::Include
           Parameters:
             Location: hello-world/oas.yaml
