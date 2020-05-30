@@ -11,25 +11,12 @@ Resources:
     Type: AWS::Serverless::Api
     Properties:
       StageName: prod
-      DefinitionBody: >
-        openapi: 3.0.3
-        info:
-          title: Hello World
-          description: Hello World
-          version: 1.0.0
-        paths:
-          /hello:
-            get:
-              responses:
-                '200':
-                  description: success
-                  content:
-                    application/json:
-                      schema:
-                        type: object
-                        properties:
-                          message:
-                            type: string
+      DefinitionBody:
+        'Fn::Transform':
+          Name: AWS::Include
+          Parameters:
+            Location: hello-world/oas.yaml
+
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
