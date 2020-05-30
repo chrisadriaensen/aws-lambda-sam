@@ -19,7 +19,5 @@ paths:
       x-amazon-apigateway-integration:
         type: aws_proxy
         httpMethod: POST
-        uri:
-          Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${!Ref HelloWorldFunction}/invocations
-        credentials:
-          Fn::Sub: arn:aws:iam::${AWS::AccountId}:role/apigateway-invoke-lambda-exec-role
+        uri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${HelloWorldFunction}/invocations
+        credentials: !Sub arn:aws:iam::${AWS::AccountId}:role/apigateway-invoke-lambda-exec-role
