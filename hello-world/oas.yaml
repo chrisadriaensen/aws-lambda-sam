@@ -20,6 +20,6 @@ paths:
         type: aws_proxy
         httpMethod: POST
         uri:
-          Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:lambda-pipeline-stack-HelloWorldFunction-1J1EP5UEVI62L/invocations
+          Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${!Ref HelloWorldFunction}/invocations
         credentials:
           Fn::Sub: arn:aws:iam::${AWS::AccountId}:role/apigateway-invoke-lambda-exec-role
