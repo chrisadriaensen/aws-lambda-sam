@@ -11,7 +11,8 @@ Resources:
     Type: AWS::Serverless::Api
     Properties:
       StageName: prod
-      DefinitionBody:
+      DefinitionBody: >
+        openapi: 3.0.3
         info:
           title: Hello World
           description: Hello World
