@@ -11,7 +11,7 @@ Resources:
     Type: AWS::Serverless::Api
     Properties:
       StageName: prod
-      DefinitionBody:
+      DefinitionBody: >
         info:
           title: Hello World
           description: Hello World
