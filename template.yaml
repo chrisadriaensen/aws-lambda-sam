@@ -23,3 +23,4 @@ Resources:
           Properties:
             Path: /hello
             Method: get
+            RestApiId: !Ref HelloWorldApi
