@@ -16,6 +16,8 @@ paths:
                 properties:
                   message:
                     type: string
+
+      # Explicit integration required for REST HTTP (bug in combination with SAM)
       x-amazon-apigateway-integration:
         type: aws_proxy
         httpMethod: POST
