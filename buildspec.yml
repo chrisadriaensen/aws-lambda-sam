@@ -5,7 +5,7 @@ phases:
       nodejs: 12
   build:
     commands:
-      - sam package --s3-bucket $BUCKET --output-template-file package.yaml
+      - aws cloudformation package --s3-bucket $BUCKET --output-template-file package.yaml
 artifacts:
   files:
     - package.yaml
